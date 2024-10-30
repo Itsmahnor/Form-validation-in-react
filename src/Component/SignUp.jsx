@@ -30,7 +30,7 @@ function SignUp() {
         className="card shadow-lg border-0" 
         style={{ width: '50vw', maxWidth: '450px', padding: '30px', borderRadius: '15px' }}
       >
-        <h3 className="text-center mb-4" style={{ color: '#007bff', fontWeight: 'bold' }}>Sign Up</h3>
+        <h3 className="text-center mb-4 text-[2rem]" style={{ color: '#007bff', fontWeight: 'bold' }}>Sign Up</h3>
         <form onSubmit={HandleSubmit} >
           {/* Full Name */}
           <div className="mb-4">
@@ -88,9 +88,9 @@ function SignUp() {
           >
             Sign Up
           </button>
-          <p className='mt-4'>Already have an Account?</p>
-          <Link to="./login">
-          Login
+          <p className='mt-4 w-100 text-center '>Already have an Account?</p>
+          <Link to="./login" className='w-100 text-center font-semibold'>
+          <p>Login</p>
           </Link>
         </form>
       </div>

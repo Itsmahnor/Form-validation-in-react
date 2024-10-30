@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Contact from './Component/Contact';
 
 function App() {
   const router = createBrowserRouter([
@@ -32,14 +33,19 @@ function App() {
       path:"/cart",
       element:<><NaVBAR /> <DisplayResult />  </>
     }
+    ,
+    {
+      path:"/contact",
+      element:<><NaVBAR /> <Contact />  </>
+    }
   ]);
 
   return (
     <>
-
-<MainContext>
+ <MainContext>
     <RouterProvider router={router} />
-    </MainContext>
+    </MainContext> 
+   
  
     </>
   )

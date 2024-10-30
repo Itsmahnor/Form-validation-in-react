@@ -1,24 +1,63 @@
 import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaRegUserCircle } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
 import { UseContextInCart } from "../Store/Context";
+import Nav from 'react-bootstrap/Nav';
+import { Button } from "react-bootstrap";
 
 function NaVBAR() {
- const{cartCount}= useContext(UseContextInCart)
-  return ( 
-    <nav class="navbar bg-body-tertiary p-4">
-    <div class="container-fluid justify-content-center gap-10">
-      <Link to="/home" class="btn btn-outline-success me-2" >Home</Link>
-  
-<Link to="/cart" class="btn btn-outline-success me-2">View Cart</Link>
-<div className="relative">
-  <FaShoppingCart className="text-[3rem] " />
-  <p className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">{cartCount}</p>
-</div>
+  const { cartCount } = useContext(UseContextInCart);
+  const Storage=JSON.parse(localStorage.getItem("user"));
+  return (
+    <Nav justify variant="tabs" className="bg-blue-600 pt-5 text-[1.5rem] font-semibold">
+      <Nav.Item>
+        <NavLink 
+          to="/home" 
+          className={({ isActive }) => 
+            isActive ? " border-b-2 border-white px-16 py-3 bg-white" : "!text-black px-3 py-2"
+          }
+        >
+          Home
+        </NavLink>
+      </Nav.Item>
+      
+      <Nav.Item>
+     
+        <NavLink 
+          to="/cart" 
+          className={({ isActive }) => 
+            isActive ? " border-b-2 border-white px-16 py-3 bg-white" : "!text-black px-3 py-2"
+          }
+        >
+          Cart Details
+        
+        </NavLink>
 
-    </div>
-  </nav>
-   );
+      </Nav.Item>
+      
+      <Nav.Item>
+        <NavLink 
+          to="/contact" 
+          className={({ isActive }) => 
+            isActive ? " border-b-2 border-white px-16 py-3 bg-white" : "!text-black px-3 py-2"
+          }
+        >
+          Contact
+        </NavLink>
+      </Nav.Item>
+      {Storage ? ( <div className="flex gap-3  ">
+     <FaRegUserCircle className="text-[2rem]" />
+     {Storage.name}
+     </div>) :<Link to="/login"> <button className="mr-20 bg-white text-black font-semibold px-5 py-2 my-1 rounded-lg shadow-md hover:bg-slate-900 hover:text-white transition duration-300 ease-in-out">
+  Login
+</button></Link>
+}
+    
+      
+     
+    </Nav>
+  );
 }
 
 export default NaVBAR;

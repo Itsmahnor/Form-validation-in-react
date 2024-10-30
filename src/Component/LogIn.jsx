@@ -32,7 +32,7 @@ const Navigate=useNavigate();
         className="card shadow-lg border-0" 
         style={{ width: '50vw', maxWidth: '400px', padding: '30px', borderRadius: '15px' }}
       >
-        <h3 className="text-center mb-4" style={{ color: '#007bff', fontWeight: 'bold' }}>Sign In</h3>
+        <h3 className="text-center mb-4 text-[2rem]" style={{ color: '#007bff', fontWeight: 'bold' }}>Sign In</h3>
         <form onSubmit={HandleSubmit}>
           {/* Username */}
           <div className="mb-4">
@@ -76,9 +76,9 @@ const Navigate=useNavigate();
           >
             Login
           </button>
-          <p className='mt-4'>Don't have an Account?</p>
-          <Link to="/">
-        Register Here
+          <p className='mt-4 text-center w-100 '>Don't have an Account?</p>
+          <Link to="/"  className='w-100 text-center font-semibold'>
+       <p>Register Here</p>
           </Link>
         </form>
       </div>
@@ -86,4 +86,4 @@ const Navigate=useNavigate();
   );
 }
 
-export default Login;
+export default Login; 
