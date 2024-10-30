@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "description": "High-quality wireless headphones with noise cancellation and 20-hour battery.",
+    "price": 59.99,
+    "image": "https://img.drz.lazcdn.com/static/pk/p/cdc8faaebf41633c737e0610c65784fa.jpg_720x720q80.jpg",
+    "quantity":0
+  },
+  {
+    "id": 2,
+    "name": "Smartwatch",
+    "description": "A stylish smartwatch with heart-rate monitoring, GPS, and a variety of fitness tracking features.",
+    "price": 99.99,
+    "image": "https://m.media-amazon.com/images/I/618k+Ulje3L._AC_SL1424_.jpg",
+    "quantity":0
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "description": "Comfortable and durable running shoes with breathable fabric and enhanced grip.",
+    "price": 75.00,
+    "image": "https://blackcamel.pk/cdn/shop/files/DSC4056_1200x_4b744621-abef-47a0-8287-97d096ed8355.jpg?v=1691522167&width=1445",
+    "quantity":0
+  },
+  
+    {
+      "id": 4,
+      "name": "Portable Power Bank",
+      "description": "10,000mAh power bank with fast charging and multiple USB ports  fast charging and multiple.",
+      "price": 25.99,
+      "image": "https://images.philips.com/is/image/philipsconsumer/a5765849ade0479285e4b0cc0045e9e8?wid=700&hei=700&$pnglarge$",
+      "quantity": 0
+    },
+    {
+      "id": 5,
+      "name": "Wireless Earbuds",
+      "description": "Compact wireless earbuds with touch controls, water resistance, and a 5-hour battery life.",
+      "price": 49.99,
+      "image": "https://www.space-tech.co/cdn/shop/products/TW-20-Black-002_1200x1200.jpg?v=1724666649",
+      "quantity": 0
+    }
+   
+  
+]

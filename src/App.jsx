@@ -1,11 +1,13 @@
 
 
 import './App.css'
-import Home from './Component/Home';
+import MainContext from "./Store/Context";
 import Login from './Component/LogIn'
 import SignUp from './Component/SignUp'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import DisplayResult from "./Component/Display";
+import Homepage from "./Component/Home";
+import NaVBAR from "./Component/Navbar";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,19 +20,26 @@ function App() {
       element: <SignUp />,
     },
     {
-      path: "login",
+      path: "/login",
       element: <Login />
     },
+ 
     {
-      path:"home",
-      element: <Home />
+      path:"/home",
+      element:(<><NaVBAR/> <Homepage />   </>)
+    },
+    {
+      path:"/cart",
+      element:<><NaVBAR /> <DisplayResult />  </>
     }
   ]);
 
   return (
     <>
 
+<MainContext>
     <RouterProvider router={router} />
+    </MainContext>
  
     </>
   )

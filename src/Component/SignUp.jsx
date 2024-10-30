@@ -21,6 +21,7 @@ function SignUp() {
    navigate('/login')
   }
   return (
+    
     <div 
       className="d-flex justify-content-center align-items-center" 
       style={{ minHeight: '100vh', padding: '20px' }}
@@ -30,7 +31,7 @@ function SignUp() {
         style={{ width: '50vw', maxWidth: '450px', padding: '30px', borderRadius: '15px' }}
       >
         <h3 className="text-center mb-4" style={{ color: '#007bff', fontWeight: 'bold' }}>Sign Up</h3>
-        <form onSubmit={HandleSubmit}>
+        <form onSubmit={HandleSubmit} >
           {/* Full Name */}
           <div className="mb-4">
             <label htmlFor="fullName" className="form-label text-secondary">Full Name</label>
